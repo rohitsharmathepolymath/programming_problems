@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Boost Program",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "cppvsdbg", // For GCC/MinGW, change to dbg. For MSVC, change to "cppvsdbg"
+      "miDebuggerPath": "",
+      "preLaunchTask": "C/C++: cl.exe build active file" // ✅ Runs your Boost build task first
+    }
+  ]
+}
