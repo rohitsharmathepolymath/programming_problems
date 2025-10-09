@@ -1,7 +1,10 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-    cout << "Hello, world!" << endl;
-    return 0;
+int main()
+{
+    int a = 5, b = 10;
+    int c;
+    c = a * b;
+    cout << "Rohit :" << c;
 }

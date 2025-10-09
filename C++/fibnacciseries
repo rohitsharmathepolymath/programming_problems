@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main (){
+    int a, b, n;
+    b = 0;
+    a = 1;
+    cout<<"Enter the number of elements in the fibnacci series: ";
+    cin>>n;
+    cout<<a<<" ";
+    for (int i = 0; i < n-1; i ++){
+        b = a;
+        cout<<b<<"";
+    }
+    return 0;
+}
