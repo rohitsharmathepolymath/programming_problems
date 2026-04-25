@@ -1,19 +1,26 @@
-#include<iostream>
-#include<chrono>
-using namespace std;
-#define ull long
+#include <iostream>
+#include <chrono>
 
-int main(){
-    ull i,sum=0, n;
-    cout<<"Enter a Number:";
-    cin>>n;
+using namespace std;
+
+#define ull long long
+
+int main()
+{
+    ull n;
+    cout << "Enter a Number: ";
+    cin >> n;
+
     auto start = chrono::high_resolution_clock::now();
-    for (i=1; i<=n;i++){
-        sum+=i;
-    }
+
+    ull sum = (n * (n + 1)) / 2;
+
     auto stop = chrono::high_resolution_clock::now();
-    auto duration = chrono::duration_cast<chrono::milliseconds>(stop-start).count();
-    cout<<"Sum of "<<n<<"natural number is:"<<sum<<endl;
-    cout<<"Execution time is:"<<duration<<" Milliseconds"<<endl;
+
+    auto duration = chrono::duration_cast<chrono::microseconds>(stop - start).count();
+
+    cout << "Sum of " << n << " natural numbers is: " << sum << endl;
+    cout << "Execution time is: " << duration << " Microseconds" << endl;
+
     return 0;
 }
